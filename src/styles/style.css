@@ -1,0 +1,273 @@
+body {
+    color: var(--white);
+    background-color: var(--dark);
+    margin: 0;
+}
+
+/***********************/
+/******** color ********/
+/***********************/
+
+/** text **/
+    .create-text {
+        color: var(--green);
+    }
+    .rename-text {
+        color: var(--yellow);
+    }
+    .remove-text {
+        color: var(--red);
+    }
+    .file-text {
+        color: var(--orange);
+    }
+    .folder-text {
+        color:var(--light-grey);
+    }
+    .json-text {
+        color: var(--red);
+    }
+    .js-text {
+        color: var(--yellow);
+    }
+    .html-text {
+        color: var(--green);
+    }
+    .css-text {
+        color: var(--blue);
+    }
+    .error-text {
+        color: var(--red);
+    }
+    .dark-text {
+        color: var(--dark-shadow)
+    }
+
+    /** bg **/
+
+    .create-bg {
+        background-color: var(--green);
+    }
+    .rename-bg {
+        background-color: var(--yellow);
+    }
+    .remove-bg {
+        background-color: var(--red);
+    }
+    .file-bg {
+        background-color: var(--orange);
+    }
+    .folder-bg {
+        background-color: var(--dark-light);
+    }
+    .json-bg {
+        background-color: var(--red);
+    }
+    .js-bg {
+        background-color: var(--yellow);
+    }
+    .html-bg {
+        background-color: var(--green);
+    }
+    .css-bg {
+        background-color: var(--blue);
+    }
+
+    .dark-blue-bg {
+    background-color: var(--dark-light);
+    }
+
+/***************************/
+/******** end-color ********/
+/***************************/
+
+.fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.workspace {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+#code-editor-area {
+    width: 100%;
+    background-color: var(--dark-grey);
+}
+
+.editor {
+    padding: 24px;
+}
+
+#editor {
+    outline: none;
+}
+
+.editor p, span {
+    margin: 4px 0;
+}
+
+.editor-status-area {
+    display: flex;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    background-color: var(--dark-shadow);
+    border-top: 1px solid;
+    border-color: var(--dark-light);
+}
+
+.editor-status-area > p,span {
+    margin: 8px 16px;
+    /* border-right: 1px solid var(--dark-light); */
+}
+
+/**************/
+/* HeaderArea */
+/**************/
+
+.status-area {
+    display: flex;
+    justify-content: flex-end;
+    height: 28px;
+    padding: 8px 16px;
+    border-bottom: 1px solid;
+    border-color: var(--dark-light);
+}
+.status-area > div {
+    margin: 2px 12px;
+    line-height: 20px;
+    font-size: 16px;
+}
+
+/**************/
+/* FilesNavigationArea */
+/**************/
+
+#files-navigation {
+    height: 100%;
+    width: 360px;
+    padding: 12px 0 12px 0;
+    position: relative;
+}
+
+#files-navigation p,span {
+    padding: 0;
+    margin: 0;
+}
+
+#files-navigation .folder {
+    padding-left: 16px;
+}
+
+#files-navigation .item {
+    padding: 8px 0 8px 8px;
+}
+
+#files-navigation .item:hover {
+    background-color: var(--dark-light);
+    cursor: pointer;
+}
+
+.selected {
+    background-color: var(--dark-light);
+    border-color: var(--dark-blue);
+    border: 2px;
+}
+
+.opened {
+    background-color: var(--dark-grey);
+    border-color: var(--dark-blue);
+    border: 2px;
+}
+
+/**************/
+/* ManageBar */
+/**************/
+
+.manage-bar {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 16px;
+    height: 25px;
+    font-size: 7px;
+    color: var(--light-grey);
+    padding-top: 5px;
+}
+
+/**************/
+/* Icons */
+/**************/
+
+.icon {
+    z-index: 1;
+    height: 20px;
+    width: 20px;
+    display: inline-block;
+    border-radius: 50%;
+    margin: 2px 4px;
+}
+
+.icon:hover {
+    filter: brightness(0.7);
+    cursor: pointer;
+}
+
+.icon > p,span {
+    font-size: 14px;
+}
+
+/**************/
+/* Overlay Layout */
+/**************/
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--overlay);
+    z-index: 666;
+}
+
+.modal {
+    z-index: 777;
+    margin: auto;
+    margin-top: 20%;
+    max-width: 25%;
+    min-width: 360px;
+    min-height: 200px;
+    max-height: 50%;
+    background-color: var(--white);
+    display: block;
+    border-radius: 8px;
+    border: 1px solid var(--dark-grey);
+}
+
+.modal .line {
+    margin: 1.5em 0;
+    text-align: center;
+}
+
+.modal .close {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 24px;
+    height: 28px;
+    padding: 0.25em 0.25em;
+}
+
+.modal input {
+    width: 75%;
+}
+
+.modal button {
+    position: relative;
+    bottom: 0px;
+}
