@@ -1,4 +1,4 @@
-import React, { FC, memo, useCallback, useMemo } from 'react'
+import React, { FC, memo } from 'react'
 import { Color, IconTypes } from '../../../@types/style'
 
 type Props = {
@@ -9,18 +9,11 @@ type Props = {
 }
 
 const Icon: FC<Props> = ({ type, color = Color.TEXT, hint, onPress }) => {
-    const onClick = useCallback(() => {
-        onPress && onPress()
-    }, [onPress])
-
-    const componentProps = useMemo(
-        () => ({
-            className: `${type} ${color}-text`,
-            title: hint,
-            onClick,
-        }),
-        [color, hint, onClick, type]
-    )
+    const componentProps = {
+        className: `${type} ${color}-text`,
+        title: hint,
+        onClick: onPress,
+    }
 
     return (
         <div className="icon hover">

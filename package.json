@@ -5,7 +5,8 @@
     "scripts": {
         "start": "react-scripts start",
         "build": "react-scripts build",
-        "test": "react-scripts test",
+        "test": "react-scripts test --watchAll=false",
+        "test:coverage": "react-scripts test --watchAll=false --coverage",
         "eject": "react-scripts eject",
         "lint": "eslint 'src/**/*.{ts,tsx}' --max-warnings=0",
         "lint:fix": "eslint 'src/**/*.{ts,tsx}' --max-warnings=0 --fix"
@@ -20,12 +21,15 @@
         "@testing-library/jest-dom": "^5.11.4",
         "@testing-library/react": "^11.1.0",
         "@testing-library/user-event": "^12.1.10",
+        "@types/enzyme": "^3.10.8",
         "@types/jest": "^26.0.15",
         "@types/node": "^12.0.0",
         "@types/react": "^17.0.0",
         "@types/react-dom": "^17.0.0",
         "@typescript-eslint/eslint-plugin": "^4.28.0",
         "@typescript-eslint/parser": "^4.28.0",
+        "@wojtekmaj/enzyme-adapter-react-17": "^0.6.2",
+        "enzyme": "^3.11.0",
         "eslint-config-prettier": "^8.3.0",
         "eslint-plugin-prettier": "^3.4.0",
         "prettier": "^2.3.1",
@@ -48,5 +52,14 @@
             "last 1 firefox version",
             "last 1 safari version"
         ]
-    }
+    },
+    "coverageThreshold": {
+        "src/**": {
+            "branches": 70,
+            "functions": 70,
+            "lines": 70,
+            "statements": 70
+        }
+    },
+    "snapshotResolver": "<rootDir>/snapshots/config/snapshotResolver.js"
 }
