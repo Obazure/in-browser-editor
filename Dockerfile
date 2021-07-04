@@ -8,6 +8,7 @@ COPY ./yarn.lock ./
 RUN yarn --frozen-lockfile
 
 COPY ./tsconfig.json ./
+COPY ./config-overrides.js ./
 COPY ./server.js ./
 COPY ./.eslintrc ./
 COPY ./.prettierrc ./
