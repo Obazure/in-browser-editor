@@ -125,23 +125,22 @@ body {
 }
 
 .editor-status-area > p,span {
-    margin: 8px 16px;
+    padding: 8px 16px;
 }
 
 /**************/
 /* HeaderArea */
 /**************/
 
-.status-area {
-    display: flex;
-    justify-content: flex-end;
+.header-area {
+    text-align: right;
     height: 28px;
     padding: 8px 16px;
     border-bottom: 1px solid;
     border-color: var(--dark-light);
 }
-.status-area > div {
-    margin: 2px 12px;
+.header-area > div {
+    padding: 2px 12px;
     line-height: 20px;
     font-size: 16px;
 }
@@ -152,9 +151,9 @@ body {
 
 #files-navigation {
     height: 100%;
-    width: 360px;
-    padding: 12px 0 12px 0;
-    /* position: relative; */
+    min-width: 320px;
+    padding: 12px 0 0 0;
+    position: relative;
 }
 
 #files-navigation p,span {
@@ -176,8 +175,9 @@ body {
 }
 
 .navigation-tree {
-    background-color: green;
     overflow-y: auto;
+    scroll-behavior: smooth;
+    max-height: calc(100vh - 80px);
     height: 100%;
 }
 
@@ -204,7 +204,7 @@ body {
     height: 25px;
     font-size: 7px;
     color: var(--light-grey);
-    padding-top: 5px;
+    padding-top: 4px;
 }
 
 /**************/

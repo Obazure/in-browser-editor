@@ -3,7 +3,7 @@ import Text from '../StyledComponents/Text'
 
 const StatusArea: FC = () => {
     return (
-        <div className="status-area">
+        <div className="header-area">
             <div>
                 <Text>In Browser Code Editor (Anonymous user)</Text>
             </div>

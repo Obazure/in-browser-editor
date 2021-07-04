@@ -3,7 +3,7 @@
 exports[`components/HeaderArea/index should render correctly 1`] = `
 Array [
   <div
-    className="status-area"
+    className="header-area"
   >
     <div>
       <Memo(Text)>
