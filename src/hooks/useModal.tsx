@@ -23,12 +23,10 @@ const useModal = (): [Modal, OpenModal] => {
                 onSubmit(text)
                 setModal(null)
             }
-            const label = `Please enter the name ${elementType ? `for ${elementType}` : ''}.`
 
             const modal = (
                 <ElementNameModal
                     defaultValue={defaultValue}
-                    label={label}
                     onSubmit={handleSubmit}
                     onClose={onModalClose}
                 />

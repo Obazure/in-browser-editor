@@ -1,8 +1,9 @@
 import React, { FC, memo } from 'react'
+import { Color } from '../../../@types/style'
 
 type Props = {
     children?: string
-    color?: string
+    color?: Color
 }
 
 const Text: FC<Props> = ({ children, color }) => {

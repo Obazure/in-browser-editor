@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/EditorStatusArea/index should render correctly 1`] = `
+Array [
+  <div
+    className="editor-status-area"
+  >
+    <p>
+      Line: 2
+    </p>
+    <p>
+      File Extension: JS
+    </p>
+  </div>,
+]
+`;

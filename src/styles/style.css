@@ -102,10 +102,12 @@ body {
 
 .editor {
     padding: 24px;
+    height: 100%;
 }
 
 #editor {
     outline: none;
+    height: 100%;
 }
 
 .editor p, span {
@@ -124,7 +126,6 @@ body {
 
 .editor-status-area > p,span {
     margin: 8px 16px;
-    /* border-right: 1px solid var(--dark-light); */
 }
 
 /**************/
@@ -153,7 +154,7 @@ body {
     height: 100%;
     width: 360px;
     padding: 12px 0 12px 0;
-    position: relative;
+    /* position: relative; */
 }
 
 #files-navigation p,span {
@@ -161,17 +162,23 @@ body {
     margin: 0;
 }
 
-#files-navigation .folder {
+.folder {
     padding-left: 16px;
 }
 
-#files-navigation .item {
+.item {
     padding: 8px 0 8px 8px;
 }
 
-#files-navigation .item:hover {
+.item:hover {
     background-color: var(--dark-light);
     cursor: pointer;
+}
+
+.navigation-tree {
+    background-color: green;
+    overflow-y: auto;
+    height: 100%;
 }
 
 .selected {

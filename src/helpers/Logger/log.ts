@@ -7,9 +7,6 @@ export enum LogType {
 }
 
 export const Logger = (message: unknown, logType: LogType = LogType.INFO): void => {
-    if (logType !== LogType.ERROR) {
-        alert(message)
-    }
     if (logType !== LogType.SILENT) {
         // eslint-disable-next-line no-console
         console[logType](message)

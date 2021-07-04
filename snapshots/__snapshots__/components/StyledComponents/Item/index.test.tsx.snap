@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/StyleComponents/Item/index should render correctly 1`] = `
+Array [
+  <a
+    onClick={[Function]}
+    onDoubleClick={[Function]}
+  >
+    <div
+      className="item selected "
+    >
+      <Memo(Icon)
+        color="file"
+        type="fas fa-file"
+      />
+      <Memo(Text)
+        color="file"
+      >
+        file
+      </Memo(Text)>
+    </div>
+  </a>,
+]
+`;

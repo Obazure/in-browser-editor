@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/EditorScreen/index should render correctly 1`] = `
+Array [
+  <div
+    className="fullscreen"
+  >
+    <Memo(StatusArea) />
+    <div
+      className="workspace"
+    >
+      <div
+        id="files-navigation"
+      >
+        <FilesNavigationArea />
+      </div>
+      <div
+        id="code-editor-area"
+      >
+        <TextEditorArea />
+      </div>
+    </div>
+  </div>,
+]
+`;

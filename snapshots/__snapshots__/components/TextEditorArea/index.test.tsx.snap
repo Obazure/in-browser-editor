@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/TextEditorArea/index should render correctly with OpenedFile 1`] = `
+Array [
+  <div
+    className="editor file-text"
+  >
+    <TextEditor
+      contentUniqueKey="undefinedmockConstructor"
+      onChange={[Function]}
+    />
+  </div>,
+]
+`;
+
+exports[`components/TextEditorArea/index should render correctly without OpenedFile 1`] = `
+Array [
+  <div
+    className="editor file-text"
+  >
+    <TextEditor
+      contentUniqueKey="undefinedmockConstructor"
+      onChange={[Function]}
+    />
+  </div>,
+]
+`;

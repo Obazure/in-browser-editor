@@ -27,13 +27,15 @@ const FilesNavigationArea: FC = () => {
     return (
         <>
             <ManageBar />
-            <NavigationItem
-                item={fileSystem}
-                selectedElement={selectedElement}
-                openedFile={openedFile}
-                onClick={onClick}
-                onDoubleClick={onDoubleClick}
-            />
+            <div className="navigation-tree">
+                <NavigationItem
+                    item={fileSystem}
+                    selectedElement={selectedElement}
+                    openedFile={openedFile}
+                    onClick={onClick}
+                    onDoubleClick={onDoubleClick}
+                />
+            </div>
         </>
     )
 }

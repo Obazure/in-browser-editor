@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/StyledComponents/Icon/index should render Clickable Icon 1`] = `
+Array [
+  <div
+    className="icon hover"
+  >
+    <a
+      className="fas fa-file-medical dark-text"
+      onClick={[MockFunction]}
+      title="Create file"
+    />
+  </div>,
+]
+`;
+
+exports[`components/StyledComponents/Icon/index should render CreateFileIcon correctly 1`] = `
+Array [
+  <Icon
+    color="create"
+    hint="Create file"
+    onPress={[MockFunction]}
+    type="fas fa-file-medical"
+  />,
+]
+`;
+
+exports[`components/StyledComponents/Icon/index should render CreateFolderIcon correctly 1`] = `
+Array [
+  <Icon
+    color="create"
+    hint="Create folder"
+    onPress={[MockFunction]}
+    type="fas fa-folder-plus"
+  />,
+]
+`;
+
+exports[`components/StyledComponents/Icon/index should render RemoveIcon correctly 1`] = `
+Array [
+  <Icon
+    color="remove"
+    hint="Remove selected"
+    onPress={[MockFunction]}
+    type="fas fa-trash-restore"
+  />,
+]
+`;
+
+exports[`components/StyledComponents/Icon/index should render RenameIcon correctly 1`] = `
+Array [
+  <Icon
+    color="rename"
+    hint="Rename selected"
+    onPress={[MockFunction]}
+    type="fas fa-edit"
+  />,
+]
+`;
+
+exports[`components/StyledComponents/Icon/index should render simple Icon 1`] = `
+Array [
+  <div
+    className="icon hover"
+  >
+    <i
+      className="fas fa-file-medical create-text"
+      title="Create file"
+    />
+  </div>,
+]
+`;

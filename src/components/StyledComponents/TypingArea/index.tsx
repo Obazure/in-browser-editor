@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import React, { FC, MutableRefObject, useCallback } from 'react'
 
 type Props = {
@@ -7,17 +6,15 @@ type Props = {
 }
 
 const TypingArea: FC<Props> = ({ editorRef, onChange }) => {
-    const onKeyPress = useCallback(
+    const onPress = useCallback(
         event => {
-            setTimeout(() => {
-                const innerHtml = event.target.innerHTML
-                if (innerHtml === '') {
-                    event.target.innerHTML = `<p><br/></p>`
-                } else if (!innerHtml.includes('<p>')) {
-                    event.target.innerHTML = `<p>${innerHtml}</p>`
-                }
-                onChange(event.target)
-            }, 0)
+            const innerHtml = event.target.innerHTML
+            if (innerHtml === '') {
+                event.target.innerHTML = `<p><br/></p>`
+            } else if (!innerHtml.includes('<p>')) {
+                event.target.innerHTML = `<p>${innerHtml}</p>`
+            }
+            onChange(event.target)
         },
         [onChange]
     )
@@ -27,7 +24,7 @@ const TypingArea: FC<Props> = ({ editorRef, onChange }) => {
             id="editor"
             contentEditable="true"
             spellCheck="false"
-            onKeyDown={onKeyPress}
+            onKeyUp={onPress}
             suppressContentEditableWarning={true}
             ref={editorRef}
         />

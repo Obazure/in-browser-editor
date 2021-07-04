@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/NavigationItem/index should render correctly 1`] = `
+Array [
+  <React.Fragment>
+    <Memo(Item)
+      item={
+        Object {
+          "children": Array [
+            Object {
+              "extension": "file",
+              "name": "file",
+              "path": "/",
+            },
+          ],
+          "extension": "folder",
+          "name": "Project",
+          "path": "/",
+        }
+      }
+      onClick={[MockFunction]}
+      onDoubleClick={[MockFunction]}
+      opened={false}
+      selected={false}
+    />
+    <div
+      className="folder"
+    >
+      <NavigationItem
+        item={
+          Object {
+            "extension": "file",
+            "name": "file",
+            "path": "/",
+          }
+        }
+        onClick={[MockFunction]}
+        onDoubleClick={[MockFunction]}
+        openedFile={null}
+        selectedElement={
+          Object {
+            "extension": "file",
+            "name": "file",
+            "path": "/",
+          }
+        }
+      />
+    </div>
+  </React.Fragment>,
+]
+`;

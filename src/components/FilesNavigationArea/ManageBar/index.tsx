@@ -8,7 +8,7 @@ import CreateFolderIcon from '../../StyledComponents/Icon/CreateFolderIcon'
 import RemoveIcon from '../../StyledComponents/Icon/RemoveIcon'
 import RenameIcon from '../../StyledComponents/Icon/RenameIcon'
 
-const FileSystemManageBar: FC = () => {
+const ManageBar: FC = () => {
     const {
         selectedElement,
         createFileSystemElement,
@@ -85,4 +85,4 @@ const FileSystemManageBar: FC = () => {
     )
 }
 
-export default memo(FileSystemManageBar)
+export default memo(ManageBar)

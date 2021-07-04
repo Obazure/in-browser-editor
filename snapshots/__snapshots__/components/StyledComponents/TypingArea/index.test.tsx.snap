@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/StyleComponents/TypingArea/index should render correctly 1`] = `
+Array [
+  <div
+    contentEditable="true"
+    id="editor"
+    onKeyUp={[Function]}
+    spellCheck="false"
+    suppressContentEditableWarning={true}
+  />,
+]
+`;

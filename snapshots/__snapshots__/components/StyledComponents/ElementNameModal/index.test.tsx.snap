@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/ElementNameModal/index should render correctly 1`] = `
+Array [
+  <OverlayLayout>
+    <div>
+      <div
+        className="close"
+      >
+        <Memo(Icon)
+          onPress={[Function]}
+          type="fas fa-times"
+        />
+      </div>
+      <div
+        className="line"
+      >
+        <Memo(Text)
+          color="dark"
+        >
+          Please enter the name
+        </Memo(Text)>
+      </div>
+      <div
+        className="line"
+      >
+        <Memo(Text)
+          color="error"
+        >
+          
+        </Memo(Text)>
+      </div>
+      <div
+        className="line"
+      >
+        <input
+          onChange={[Function]}
+        />
+      </div>
+      <div
+        className="line"
+      >
+        <button
+          onClick={[Function]}
+        >
+          submit
+        </button>
+      </div>
+    </div>
+  </OverlayLayout>,
+]
+`;

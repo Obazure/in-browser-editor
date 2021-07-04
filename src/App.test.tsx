@@ -1,9 +1,19 @@
 import React from 'react'
-import { render, screen } from '@testing-library/react'
+import { shallow } from 'enzyme'
 import App from './App'
+import EditorScreen from './components/EditorScreen'
+import FilesProvider from './providers/FilesProvider'
 
-test('renders learn react link', () => {
-    render(<App />)
-    const linkElement = screen.getByText(/learn react/i)
-    expect(linkElement).toBeInTheDocument()
+describe('App', () => {
+    it('should render corectly', () => {
+        const wrapper = shallow(<App />)
+        const filesProvider = wrapper.find(FilesProvider)
+        expect(filesProvider).toHaveLength(1)
+        const editorScreen = filesProvider.find(EditorScreen)
+        expect(editorScreen).toHaveLength(1)
+    })
+    it('should render page matching snapshot', () => {
+        const wrapper = shallow(<App />)
+        expect(wrapper.getElements()).toMatchSnapshot()
+    })
 })

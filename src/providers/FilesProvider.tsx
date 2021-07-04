@@ -6,7 +6,6 @@ import {
     FileType,
     FolderType,
 } from '../@types/filesSystem'
-import { initialFilesContext } from '../utils/filesProvider'
 import useFileSystem from '../hooks/useFileSystem'
 import { isSameElements } from '../utils/fileSystem'
 import useFileContentManager from '../hooks/useFileContentManager'
@@ -14,8 +13,9 @@ import { writePersistanceStorage } from '../helpers/Storage/local'
 import addFileSystemElement from '../helpers/FileSystem/addFileSystemElement'
 import deleteFileSystemElement from '../helpers/FileSystem/deleteFileSystemElement'
 import changeNameFileSystemElement from '../helpers/FileSystem/changeNameFileSystemElement'
+import { Logger, LogType } from '../helpers/Logger/log'
 
-export type FilesContextType = {
+type FilesContextType = {
     fileSystem: FolderType
     openedFile: FileType | null
     openFile: (file: FileType) => void
@@ -26,6 +26,42 @@ export type FilesContextType = {
     removeFileSystemElement: (element: FileSystemElement) => void
     setFileContent: (fullpath: string, content: string) => void
     getFileContent: (fullpath: string) => string
+}
+
+const initialFilesContext: FilesContextType = {
+    fileSystem: {
+        name: 'Project',
+        path: '',
+        extension: FileSystemElementExtension.FOLDER,
+        children: [],
+    },
+    createFileSystemElement: () => {
+        Logger('Could not call Create, Action does not work without provider.', LogType.ERROR)
+    },
+    renameFileSystemElement: () => {
+        Logger('Could not call Rename, Action does not work without provider.', LogType.ERROR)
+    },
+    removeFileSystemElement: () => {
+        Logger('Could not call Remove, Action does not work without provider.', LogType.ERROR)
+    },
+    selectedElement: null,
+    selectFileSystemElement: () => {
+        Logger(
+            'Could not call select on "File/Folder", Action does not work without provider.',
+            LogType.ERROR
+        )
+    },
+    openedFile: null,
+    openFile: () => {
+        Logger('Could not call openFile, Action does not work without provider.', LogType.ERROR)
+    },
+    getFileContent: () => {
+        Logger('Could not call openFile, Action does not work without provider.', LogType.ERROR)
+        return ''
+    },
+    setFileContent: () => {
+        Logger('Could not call openFile, Action does not work without provider.', LogType.ERROR)
+    },
 }
 
 const FilesContext = createContext<FilesContextType>(initialFilesContext)

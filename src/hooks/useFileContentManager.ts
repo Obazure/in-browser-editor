@@ -3,7 +3,7 @@ import {
     readPersistanceStorage,
     writePersistanceStorage,
 } from '../helpers/Storage/local'
-import { newFileContent } from '../utils/fileContent'
+import { newFileContent } from '../utils/fileSystem'
 
 export class FileContentManager extends Map {
     get(key: string): string {

@@ -2,19 +2,17 @@ import React, { FC, memo, useCallback, useEffect, useRef, useState } from 'react
 import { OnTextSubmit } from '../../../@types/component'
 import { Color, IconTypes } from '../../../@types/style'
 import OverlayLayout from '../../../layouts/OverlayLayout'
+import { validateFileName } from '../../../utils/fileSystem'
 import Icon from '../Icon'
 import Text from '../Text'
 
 type Props = {
     defaultValue?: string
-    label: string
     onSubmit: OnTextSubmit
     onClose: () => void
 }
 
-const forbiddenSymbols = ['/', '\\', '#', '"', "'", '%']
-
-const ElementNameModal: FC<Props> = ({ label, defaultValue = '', onSubmit, onClose }) => {
+const ElementNameModal: FC<Props> = ({ defaultValue = '', onSubmit, onClose }) => {
     const init = useRef(true)
     const [errorMessage, setErrorMessage] = useState('')
     const [text, setText] = useState('')
@@ -31,18 +29,9 @@ const ElementNameModal: FC<Props> = ({ label, defaultValue = '', onSubmit, onClo
     }, [defaultValue])
 
     const validateText = useCallback((value: string): boolean => {
-        const foundForbiddenSymbols = new Set()
-        if (!value.length) {
-            setErrorMessage("Name shouldn't be empty.")
-            return false
-        }
-        for (let i = 0; i < value.length; i++) {
-            if (forbiddenSymbols.includes(value.charAt(i))) {
-                foundForbiddenSymbols.add(value.charAt(i))
-            }
-        }
-        if (foundForbiddenSymbols.size > 0) {
-            setErrorMessage(`Please do not use "${[...foundForbiddenSymbols].join(',')}"`)
+        const errors = validateFileName(value)
+        if (errors.length > 0) {
+            setErrorMessage(errors.join(' '))
             return false
         }
         setErrorMessage('')
@@ -75,7 +64,7 @@ const ElementNameModal: FC<Props> = ({ label, defaultValue = '', onSubmit, onClo
                     <Icon type={IconTypes.CLOSE} onPress={handleClose} />
                 </div>
                 <div className="line">
-                    <Text color={Color.TEXT}>{label}</Text>
+                    <Text color={Color.TEXT}>Please enter the name</Text>
                 </div>
                 <div className="line">
                     <Text color={Color.ERROR}>{errorMessage}</Text>
