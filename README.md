@@ -32,3 +32,7 @@ Launch the app in development
 ```yarn test``` | ```yarn test:coverage``` for running test
 
 ```yarn lint``` | ```yarn lint:fix``` for running code linting and syntax errors
+
+#### Additional links
+
+- [Git hub actions Dashboard](https://github.com/Obazure/in-browser-editor/actions)
